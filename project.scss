@@ -3,31 +3,34 @@
     transform: translate(0, -50%);
     border-radius: 3px;
 }
-.container{
+@mixin slider {
     display: block;
+    position: relative;
+}
+@mixin height {
+    background-size: cover;
+    height: 750px;
+}
+.container{
+    @include slider;
     width: 100%;
     margin: 0;
-    position: relative;
-    
 }
-
 .the_slider{
-    display: block;
+    @include slider;
     overflow: hidden;
-    width: 100%;
-    position: relative;
-    height: 800px;
+    width: 1340px;
+    height: 900px;
 }
 
 .the_slider .s_slide{
-    display: block;
+    @include slider;
     float: left;
     background-repeat: no-repeat;
 }
 
 .the_slider .s_slider_container{
-    display: block;
-    position: relative;
+    @include slider;
     cursor: pointer;
 }
 
@@ -37,27 +40,58 @@
 
 .the_slider .s_slide_0{
     background-image: url('./slider_n_1.jpg');
-    background-size: cover;
-    height: 1000px;
+    @include height;
 }
 
 .the_slider .s_slide_1{
     background-image: url('./slide_n_2_o.jpg');
-    background-size: cover;
-    height: 750px;
+    @include height;
 }
 .the_slider .s_slide_2{
     background-image: url('./spa.jpg');
-    background-size: cover;
-    height: 750px;
-}
-.the_slider .s_slide_0{
-    background-image: url('./slider_n_1.jpg');
-    background-size: contain;
+    @include height;
 }
 .prev {
     @include prev-next;
 }
 .next {
     @include prev-next;
+}
+.header {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 10;
+}
+.picture {
+    width: 100px;
+    height: 50px;
+    padding-top: 25px;
+    padding-left: 15px;
+    padding-bottom: 25px;
+}
+.book-now {
+    padding-top: 30px;
+    padding-left: 970px;
+}
+.mainbar {
+    display: flex;
+    flex-direction: row;
+}
+.btn {
+    background-color: #c5bc58;
+    color: #fff ;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 8px 24px;
+    font-size: 13px;
+    line-height: 1.5;
+    border-radius: 0;
+    border: 1px #c5bc58 solid;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: snow;
+    color: #c5bc58;
 }

@@ -12,7 +12,7 @@
                 "enabled": true, // Enable autoplay slider
                 "direction": "ltr" // direction right to left rtl or left to right ltr
             },
-            "delay": 2500, // The sliding delay in milliseconds
+            "delay": 1500, // The sliding delay in milliseconds
             "speed": 500 // The sliding speed can be slow, normal, fast or customized in milliseconds
         }
 
