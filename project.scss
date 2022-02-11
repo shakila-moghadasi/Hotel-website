@@ -1,1 +1,63 @@
+@mixin prev-next {
+    // background-image: url(https://hotel-xenia.plethorathemes.com/wp-content/themes/hotel-xenia/assets/images/slider-arrows.png);
+    transform: translate(0, -50%);
+    border-radius: 3px;
+}
+.container{
+    display: block;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    
+}
 
+.the_slider{
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    height: 800px;
+}
+
+.the_slider .s_slide{
+    display: block;
+    float: left;
+    background-repeat: no-repeat;
+}
+
+.the_slider .s_slider_container{
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+.the_slider .s_slider_container:active{
+    cursor: -webkit-grabbing
+}
+
+.the_slider .s_slide_0{
+    background-image: url('./slider_n_1.jpg');
+    background-size: cover;
+    height: 1000px;
+}
+
+.the_slider .s_slide_1{
+    background-image: url('./slide_n_2_o.jpg');
+    background-size: cover;
+    height: 750px;
+}
+.the_slider .s_slide_2{
+    background-image: url('./spa.jpg');
+    background-size: cover;
+    height: 750px;
+}
+.the_slider .s_slide_0{
+    background-image: url('./slider_n_1.jpg');
+    background-size: contain;
+}
+.prev {
+    @include prev-next;
+}
+.next {
+    @include prev-next;
+}

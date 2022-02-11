@@ -6,17 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./project.js"></script>
-    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <!-- <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css"> -->
     <link rel="stylesheet" href="./project.css">
-    <link rel="stylesheet" href="./OwlCarousel2-2.3.4 (2)/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <!-- <link rel="stylesheet" href="./OwlCarousel2-2.3.4 (2)/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
     <script src="./OwlCarousel2-2.3.4 (2)/OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
-    <script src="./OwlCarousel2-2.3.4 (2)/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script> 
+    <script src="./OwlCarousel2-2.3.4 (2)/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>  -->
+    <script src="./jquery-background-image-slider-slicarousel/jquery-background-image-slider-slicarousel/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="./jquery-background-image-slider-slicarousel/jquery-background-image-slider-slicarousel/css/slicarousel.css">
+    <script src="./jquery-background-image-slider-slicarousel/jquery-background-image-slider-slicarousel/js/slicarousel.js"></script>
     <title>Document</title>
 </head>    
 <body>
     <section>
-        <div>
+        <!-- <div>
             <div class="owl-carousel">
               <div class="item">
                 <img src="./slider_n_1.jpg">
@@ -28,20 +31,38 @@
                 <img src="./spa.jpg">
               </div>
             </div>
-          </div>
+          </div> -->
+          <div class="container">
+            <div class="the_slider">
+               
+            </div>
+         </div>
         <script>
-            $(document).ready(function() {
-              var owl = $('.owl-carousel');
-              owl.owlCarousel({
-                items: 1,
-                loop: true,
-                autoplay: true,
-                autoplayTimeout: 1500,
-                autoplayHoverPause: true,
-                nav:true,
-                navText: ['<svg width="5%" height="5%" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"/></svg>','<svg width="5%" height="5%" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"/></svg>'],
-              });
-            })
+            // $(document).ready(function() {
+            //   var owl = $('.owl-carousel');
+            //   owl.owlCarousel({
+            //     items: 1,
+            //     loop: true,
+            //     autoplay: true,
+            //     autoplayTimeout: 1500,
+            //     autoplayHoverPause: true,
+            //     nav:true,
+            //     navText: ['<svg width="5%" height="5%" x="0" y="15" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"/></svg>','<svg width="5%" height="5%" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"/></svg>'],
+            //   });
+            // })
+            $(document).ready(function(){
+	
+            $(".the_slider").slicarousel({
+                  nbr_slides: 3,
+                  arrows: true,
+                  
+                  autoplay: {
+                            "enabled": true,
+                            "direction": "ltr",
+                            autoplayTimeout: 1500,
+                  },
+            });
+            });
         </script> 
     </section>     
 </body>
