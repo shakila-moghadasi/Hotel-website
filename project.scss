@@ -1,25 +1,59 @@
-@mixin prev-next {
-    // background-image: url(https://hotel-xenia.plethorathemes.com/wp-content/themes/hotel-xenia/assets/images/slider-arrows.png);
-    transform: translate(0, -50%);
-    border-radius: 3px;
+* {
+    margin-top: 0;
+    margin-left: 0;
 }
+$border : 1px solid rgb(14, 192, 133);
+$margin : 5px 10px 15px 15px;
+$block : block;
+$none : none;
+$fontheader : 14px;
+$pointer : pointer;
 @mixin slider {
-    display: block;
     position: relative;
 }
 @mixin height {
     background-size: cover;
-    height: 750px;
+    height: 800px;
+}
+@mixin lineanimation {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    margin-top: 10px;
+    background: rgb(14, 192, 133);
+    transition: width .3s;
+}
+@mixin menu {
+    padding-top: 40px;
+    color: white;
+    font-size: $fontheader;
+}
+@mixin menutext {
+    font-size: $fontheader;
+    visibility: hidden;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border : 1px solid black;
+    position: absolute;
+    z-index: 1;
+    padding : 5px;
+    margin-top: 20px;
+    transition: opacity 0.3s;
+}
+@mixin menuhover {
+    visibility: visible;
+    opacity: 1;
 }
 .container{
     @include slider;
-    width: 100%;
-    margin: 0;
+    width: 1350px;
 }
 .the_slider{
     @include slider;
     overflow: hidden;
-    width: 1340px;
+    width: 1350px;
     height: 900px;
 }
 
@@ -31,7 +65,7 @@
 
 .the_slider .s_slider_container{
     @include slider;
-    cursor: pointer;
+    cursor: $pointer;
 }
 
 .the_slider .s_slider_container:active{
@@ -51,15 +85,9 @@
     background-image: url('./spa.jpg');
     @include height;
 }
-.prev {
-    @include prev-next;
-}
-.next {
-    @include prev-next;
-}
 .header {
     position: absolute;
-    width: 100%;
+    width: 1350px;
     background-color: rgba(0,0,0,0.3);
     z-index: 10;
 }
@@ -72,13 +100,16 @@
 }
 .book-now {
     padding-top: 30px;
-    padding-left: 970px;
+    padding-left: 980px;
+}
+.men-right {
+    visibility: visible;
 }
 .mainbar {
     display: flex;
     flex-direction: row;
 }
-.btn {
+#btn {
     background-color: #c5bc58;
     color: #fff ;
     font-weight: 400;
@@ -87,11 +118,305 @@
     padding: 8px 24px;
     font-size: 13px;
     line-height: 1.5;
-    border-radius: 0;
     border: 1px #c5bc58 solid;
-    cursor: pointer;
+    cursor: $pointer;
 }
 .btn:hover {
     background-color: snow;
     color: #c5bc58;
 }
+.Extra {
+    padding-left: 22px;
+    color: white;
+}
+.menu {
+    display: inline-block;
+    cursor: $pointer;
+    padding-left: 18px;
+    padding-top: 35px;
+  }
+  .bar1, .bar2, .bar3 {
+    width: 25px;
+    height: 1px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  .sidenav {
+    font-size: 13px;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow: scroll;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  .black-slide {
+    padding-top: 50px;
+    padding-left: 35px;
+    height: 77vw;
+  }
+  .high-level a::after {
+    @include lineanimation;
+  }
+  .high-level a:hover::after {
+    width: 90%;
+  }
+  .black-slide a {
+    padding-bottom: 20px;
+  }
+  .low-level {
+    padding-left: 33px;
+  }
+  .high-level::after {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 1px;
+    margin-top: 10px;
+    margin-bottom: 60px;
+    background: grey;
+  }
+  .p-blacklist {
+    color: white;
+  }
+  .phone {
+      color: white;
+      padding-top: 10px;
+  }
+  .phone-icon::after {
+    content: "\f095";
+  }
+  .email {
+    color: white;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+  }
+  .email-icon::after {
+    content: "\f0e0";
+    display: inline-block;
+  }
+  .txt-email {
+      display: inline-block;
+      font-size: medium;
+  }
+  .sidenav a {
+    text-decoration: $none;
+    color: white;
+    display: $block;
+    transition: 0.3s;
+  }
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  .closebtn {
+    position: absolute;
+    margin-top: -18px;
+    right: 25px;
+    font-size: medium;
+    margin-right: 170px;
+    
+  }
+  .dropdown-content {
+    display: $none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    height: 140px;
+    z-index: 1;
+  }
+  .dropdown-content a {
+    color: white;
+    text-decoration: $none;
+    display: $block;
+  }
+  .dropdown:hover .dropdown-content {display: $block;}
+  .light {
+    margin: $margin;
+    border-bottom: $border;
+    font-size: $fontheader;
+    cursor: $pointer;
+  }
+  .light::after {
+    @include lineanimation;
+}
+  .dark {
+    margin: $margin;
+    font-size: $fontheader;
+    cursor: $pointer;
+  }
+
+.dark::after {
+    @include lineanimation;
+}
+
+.dark:hover::after {
+    width: 100%;
+}
+  .dropbtn {
+    padding-top: 6px;
+    text-decoration: $none;
+    font-size: $fontheader;
+    color: white;
+    display: $block;
+    border: $none;
+    background: $none;
+    width:100%;
+    text-align: left;
+    cursor: $pointer;
+  }
+  .dropbtn::after {
+    @include lineanimation;
+    width: 43px;
+  }
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  }
+  .dropdown {
+      margin-left: -81vw;
+      margin-top: 2.5vw;
+      position: relative;
+      display: inline-block;
+      font-size: $fontheader;
+  }
+  #border {
+      display: inline-block;
+  }
+  .rooms {
+    @include menu;
+    padding-left: 30px;
+    cursor: $pointer;
+  }
+  .roomstext {
+    @include menutext;
+  }
+  .rooms:hover .roomstext {
+    @include menuhover;
+  }
+  .rooms::after {
+    @include lineanimation;
+  }
+  .rooms:hover::after {
+    width: 100%;
+  }
+
+
+  .loc {
+    padding-left: 40px;
+    @include menu;
+    cursor: $pointer;
+  }
+  .loctext {
+    @include menutext;
+  }
+  .loc:hover .loctext {
+    @include menuhover;
+  }
+  .loc::after {
+    @include lineanimation;
+  }
+  .loc:hover::after {
+    width: 100%;
+  }
+
+
+  .activiti {
+    padding-left: 45px;
+    @include menu;
+    cursor: $pointer;
+  }
+  .activititext {
+    @include menutext;
+  }
+  .activiti:hover .activititext {
+    @include menuhover;
+  }
+  .activiti::after {
+    @include lineanimation;
+  }
+  .activiti:hover::after {
+    width: 100%;
+  }
+
+
+  .res {
+    padding-left: 45px;
+    @include menu;
+    cursor: $pointer;
+  }
+  .restext {
+    @include menutext;
+  }
+  .res:hover .restext {
+    @include menuhover;
+  }
+  .res::after {
+    @include lineanimation;
+  }
+  .res:hover::after {
+    width: 100%;
+  }
+
+
+  .spa {
+    padding-left: 45px;
+    @include menu;
+    cursor: $pointer;
+  }
+  .spatext {
+    @include menutext;
+  }
+  .spa:hover .spatext {
+    @include menuhover;
+  }
+  .spa::after {
+    @include lineanimation;
+  }
+  .spa:hover::after {
+    width: 100%;
+  }
+
+
+  .contact {
+    padding-left: 45px;
+    @include menu;
+    cursor: $pointer;
+  }
+  .contacttext {
+    @include menutext;
+  }
+  .contact:hover .contacttext {
+    @include menuhover;
+  }
+  .contact::after {
+    @include lineanimation;
+  }
+  .contact:hover::after {
+    width: 100%;
+  }
+
+
+  .more {
+    padding-left: 45px;
+    @include menu;
+    cursor: $pointer;
+  }
+  .moretext {
+    @include menutext;
+  }
+  .more:hover .moretext {
+    @include menuhover;
+  }
+  .more::after {
+    @include lineanimation;
+  }
+  .more:hover::after {
+    width: 100%;
+  }
+  

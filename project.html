@@ -14,6 +14,7 @@
 </head>    
 <body>
     <section>
+        <div id="all">
           <div class="header">
             <div class="mainbar">
                 <div class="logo">
@@ -22,36 +23,136 @@
                   </a>
                 </div>
                 <div class="book-now">
-                  <button class="btn">Book Now</button>
+                  <button id="btn">BOOK NOW</button>
                 </div>
-                <!-- <div class="dropdown">
-                  <button class="dropbtn">Home</button>
+                <a class="men-right">
+                  <span class="Extra">EXTRA</span>
+                  <span class="menu">
+                    <div onclick="myFunction(this)">
+                      <div class="bar1"></div>
+                      <div class="bar2"></div>
+                      <div class="bar3"></div>
+                    </div>
+                  </span>
+                </a>    
+                <div class="dropdown">
+                  <button class="dropbtn">HOME
+                    <i class="fa fa-caret-down"></i>
+                  </button>
                   <div class="dropdown-content">
-                    <a href="#">Home light</a>
-                    <a href="#">Home Dark</a>
+                    <li class="light">
+                    <a href="#">HOME LIGHT</a>
+                    </li>
+                    <li class="dark">
+                    <a href="#">HOME DARK</a>
+                    </li>
                   </div>
-                </div> -->
-            </div>    
-          </div>
+                </div>
+                <div class="rooms">ROOMS
+                  <span class="roomstext">ROOMS</span>
+                </div>
+                <div class="loc">LOCATION
+                  <span class="loctext">LOCATION</span>
+                </div>
+                <div class="activiti">ACTIVITIES
+                  <span class="activititext">ACTIVITIES</span>
+                </div>
+                <div class="res">RESTAURANT
+                  <span class="restext">RESTAURANT</span>
+                </div>
+                <div class="spa">SPA
+                  <span class="spatext">SPA</span>
+                </div>
+                <div class="contact">CONTACT
+                  <span class="contacttext">CONTACT</span>
+                </div>
+                <div class="more">MORE
+                  <span class="moretext">MORE</span>
+                </div>
+            </div>  
+          </div>   
           <div class="container">
             <div class="the_slider">
                
             </div>
          </div>
+        </div>
+         <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">EXTRA&nbsp;&nbsp;&times;</a>
+          <div class="black-slide">  
+          <div class="high-level">
+          <a href="#">RESERVATIONS & BOOKING</a>
+          <a href="#">GRIDS & MASONRY VIEWS</a>
+          <DIV class="low-level">
+          <a href="#">ROOMS LIST GRID</a>
+          <a href="#">BLOG MASONRY GRID</a>
+          <a href="#">TESTIMONIALS MASONRY GRID</a>
+          </DIV>
+          <a href="#">SLIDER SHORTCODES</a>
+          <div class="low-level">
+          <a href="#">ROOM SLIDERS</a>
+          <a href="#">SERVIECES SLIDERS</a>
+          </div>
+          <a href="#">SINGLE PAGE VIEWS</a>
+          <div class="low-level">
+          <a href="#">ROOM SINGLE VIEW</a>
+          <a href="#">SERVIECE SINGLE VIEW</a>
+          <a href="#">POST SINGLE VIEW</a>
+          <a href="#">POST SINGLE FULLSCREEN</a>
+          </div>
+          <a href="#">ERROR 404 PAGE</a>
+          <a href="#">BUY THIS THEME!</a>
+          </div>
+          <P class="p-blacklist">This is a sidebar that can be used to put an</P>
+          <p class="p-blacklist"> extra menu with details that don't need to be</p> 
+          <p class="p-blacklist">on the main menu. It also serves as the mobile</p>
+          <p class="p-blacklist">menu area!</P>
+          <p class="phone">
+            <i class="phone-icon"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span>(+30) 210 1234567</span>
+          </p>
+          <p class="email">
+            <i class="email-icon"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="txt-email">
+              <a href="mailto:info@ple-hotelxenia.com" class="txt-email" style="color: #6fb586;">info@ple-hotelxenia.com</a>
+            </span>
+          </p>
+          </div>
+        </div>
         <script>
-            $(document).ready(function(){
+        $(document).ready(function(){
 	
             $(".the_slider").slicarousel({
                   nbr_slides: 3,
-                  arrows: true,
-                  
                   autoplay: {
                         "enabled": true,
-                        "direction": "ltr",
+                        "direction": "rtl",
                         autoplayTimeout: 1500,
                   },
             });
+            $(".menu").click(function(){
+              $('#mySidenav').css({
+                width:"300px",
+              }); 
+              $(".mainbar").css({
+                marginLeft:"-250px",
+              });
+              $(".men-right").css({
+                visibility: "hidden",
+              })
+            }); 
+            $(".closebtn").click(function(){
+              $("#mySidenav").css({
+                width:0,
+              });
+              $(".mainbar").css({
+                marginLeft:0,
+              });
+              $(".men-right").css({
+                visibility: "visible",
+              })
             });
+        });
         </script> 
     </section>     
 </body>
