@@ -89,9 +89,17 @@
   line-height: 1.5;
   border: 1px #c5bc58 solid;
   cursor: pointer;
-  transition: all 0.1s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
   display: block;
   position: relative;
+  background-position: 0%;
+}
+
+#btn:hover {
+  color: #000 !important;
+  background-color: transparent;
+  text-shadow: none;
+  background-position: 100%;
 }
 
 .Extra {
@@ -717,41 +725,50 @@
   display: flex;
   flex-direction: row;
   align-content: space-between;
-  margin-left: 7vw;
+  margin-left: 3.6vw;
   margin-right: 7vw;
   margin-top: 7vw;
 }
 
-.spa-salon {
-  background-image: url(./spa-banner.jpg);
+.spaa {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   display: block;
   height: 550px;
   width: 400px;
+}
+
+.gym-high {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  height: 550px;
+  width: 400px;
+  margin-left: 2.2vw;
+}
+
+.restaurant-high {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  height: 550px;
+  width: 400px;
+  margin-left: 2.2vw;
+}
+
+.spa-salon {
+  position: relative;
 }
 
 .gym {
-  background-image: url(./gym-banner.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: block;
-  height: 550px;
-  width: 400px;
-  margin-left: 2.2vw;
+  position: relative;
 }
 
 .restaurant {
-  background-image: url(./restaurant-banner.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: block;
-  height: 550px;
-  width: 400px;
-  margin-left: 2.2vw;
+  position: relative;
 }
 
 .hoverbox_icon {
@@ -761,10 +778,65 @@
 
 .hoverbox_paragraph {
   color: white;
-  padding-top: 19vw;
-  padding-left: 3vw;
-  padding-right: 3vw;
+  margin-bottom: 6.6vw;
+  padding-left: 18.3vw;
   font-size: 18px;
+  bottom: 0;
+  left: 0;
+  width: 10.8vw;
+  height: 0vw;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  animation-name: example;
+  transition: 0.5s ease;
+}
+
+.hoverbox_paragraph p {
+  visibility: hidden;
+  margin-top: 35vw;
+  margin-left: -5vw;
+  margin-right: -5vw;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.spa-high:hover .hoverbox_paragraph {
+  opacity: 1;
+  height: 44vw;
+}
+
+.spa-high:hover .hoverbox_paragraph p {
+  visibility: visible;
+}
+
+.spa-high:hover .hoverbox_title {
+  visibility: hidden;
+}
+
+.gym-high:hover .hoverbox_paragraph {
+  opacity: 1;
+  height: 44vw;
+}
+
+.gym-high:hover .hoverbox_paragraph p {
+  visibility: visible;
+}
+
+.gym-high:hover .hoverbox_title {
+  visibility: hidden;
+}
+
+.restaurant-high:hover .hoverbox_paragraph {
+  opacity: 1;
+  height: 44vw;
+}
+
+.restaurant-high:hover .hoverbox_paragraph p {
+  visibility: visible;
+}
+
+.restaurant-high:hover .hoverbox_title {
   visibility: hidden;
 }
 
@@ -773,6 +845,8 @@
   padding-top: 30vw;
   padding-left: 3vw;
   visibility: visible;
+  position: absolute;
+  top: 130px;
 }
 
 .lable-off {
