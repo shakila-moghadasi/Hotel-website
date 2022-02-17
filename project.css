@@ -772,13 +772,14 @@
 }
 
 .hoverbox_icon {
-  margin-left: 3vw;
-  margin-top: 2vw;
+  top: 2vw;
+  left: 2vw;
+  position: absolute;
 }
 
 .hoverbox_paragraph {
   color: white;
-  margin-bottom: 6.6vw;
+  margin-bottom: 0.3vw;
   padding-left: 18.3vw;
   font-size: 18px;
   bottom: 0;
