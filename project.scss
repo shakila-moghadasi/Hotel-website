@@ -1,6 +1,8 @@
 * {
     margin-top: 0;
     margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
 }
 $border : 1px solid rgb(14, 192, 133);
 $margin : 5px 10px 15px 15px;
@@ -8,6 +10,7 @@ $block : block;
 $none : none;
 $fontheader : 14px;
 $pointer : pointer;
+$center : center;
 @mixin slider {
     position: relative;
 }
@@ -45,6 +48,34 @@ $pointer : pointer;
 @mixin menuhover {
     visibility: visible;
     opacity: 1;
+}
+@mixin cleander {
+  display: flex;
+  flex-direction: column;
+  background-color: #1F1F2C;
+  border: 1px solid #1f1f2c !important;
+  width: 350px;
+  height: 85px;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+}
+@mixin black-area {
+  position: absolute;
+  display: inline-flex;
+  color: white;
+  text-align: center;
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-top: 40px;
+}
+@mixin  banner {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  height: 550px;
+  width: 400px;
 }
 .container{
     @include slider;
@@ -113,18 +144,34 @@ $pointer : pointer;
     background-color: #c5bc58;
     color: #fff ;
     font-weight: 400;
-    text-align: center;
-    text-transform: uppercase;
+    text-align: $center;
     padding: 8px 24px;
     font-size: 13px;
     line-height: 1.5;
     border: 1px #c5bc58 solid;
     cursor: $pointer;
+    transition: all 0.1s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+    display: block;
+    position: relative;
 }
-.btn:hover {
-    background-color: snow;
-    color: #c5bc58;
-}
+// #btn::after{
+//   display: block;
+// 	position: absolute;
+// 	height: 0px;
+// 	width: 100%;
+// 	z-index: -1;
+// 	content: '';
+// 	color:#c5bc58  !important;
+//   transform: scaleY(0);
+//   transition-timing-function: ease-out;
+//   transform-origin: 50% 100%;
+//   transition-property: transform;
+//   transition-duration: .3s;
+// }
+// #btn:hover::after {
+// 	top: auto;
+// 	height: 100%;
+// }
 .Extra {
     padding-left: 22px;
     color: white;
@@ -419,4 +466,155 @@ $pointer : pointer;
   .more:hover::after {
     width: 100%;
   }
-  
+  .black-cleander-high {
+    display: flex;
+    flex-direction: column;
+  }
+  .black-cleander-low {
+    @include black-area;
+    margin-left: 105px;
+    margin-top: 645px;
+    border: 1px solid #111118;
+    background-color: #111118;
+    padding-bottom: 115px;
+  }
+  .btn-CLEANDER {
+    @include black-area;
+    margin-left: 385px;
+    margin-top: 800px;
+    padding-bottom: 70px;
+    font-size: small;
+  }
+  #btn-CLEANDER {
+    border: 1px #6fb586 solid;
+    color: #6fb586 !important;
+    background-color: #111118;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .cleander-out {
+    @include cleander;
+    margin-left: 30px;
+  }
+  .cleander-in {
+    @include cleander;
+  }
+  .background_title {
+    color: black;
+    position: absolute;
+    font-family: Playfair Display,sans-serif;
+    text-transform: uppercase;
+    font-size: 140px;
+    position: absolute;
+    top : 84vw;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1 !important;
+    pointer-events: $none;
+    user-select: $none;
+    opacity: 0.07;
+  }
+  .labal {
+    margin-top: 16vw;
+    text-align: $center;
+  }
+  .subtitle {
+    margin-left: 36vw;
+  }
+  .svg_divider {
+    text-align: $center;
+    margin-top: 30px;
+  }
+  .wpb_wrapper {
+    text-align: $center;
+  }
+  .vc_single_image-img {
+    border: $none;
+    border-radius: 100px;
+    margin-left: 47vw;
+    margin-top: 10px;
+  }
+  .wpb_wrapper {
+    padding-left: 1vw;
+  }
+  .galery {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    margin-left: 7vw;
+    margin-right: 7vw;
+    margin-top: 7vw;
+  }
+  .spa-salon {
+    background-image: url(./spa-banner.jpg);
+    @include banner;
+  }
+  .gym {
+    background-image: url(./gym-banner.jpg);
+    @include banner;
+    margin-left: 2.2vw;
+  }
+  .restaurant {
+    background-image: url(./restaurant-banner.jpg);
+    @include banner;
+    margin-left: 2.2vw;
+  }
+  .hoverbox_icon {
+    margin-left: 3vw;
+    margin-top: 2vw;
+  }
+  .hoverbox_paragraph {
+    color: white;
+    padding-top: 19vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    font-size: 18px;
+    visibility: hidden;
+  }
+  .hoverbox_title {
+    color: white;
+    padding-top: 30vw;
+    padding-left: 3vw;
+    visibility: visible;
+  }
+  .lable-off {
+    text-align: $center;
+    padding-top: 7vw;
+    font-size: 40px;
+    line-height: 10px;
+  }
+  .txt-off {
+    text-align: $center;
+    margin-top: 2vw;
+  }
+  .off-area {
+    background-image: url(./home-banner-1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 400px;
+  }
+  #btn-off {
+    border: 1px black solid;
+    color: black !important;
+    background-color: #f4f4f4;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .btn-off {
+    padding-left: 42vw;
+    padding-top: 3vw;
+    font-size: small;
+  }
+  .ui-datepicker-title {
+    background-color: white;
+  }
+  .ui-widget-header{
+    border: none;
+    background-color: white !important;
+  }
