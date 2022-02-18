@@ -77,6 +77,32 @@ $center : center;
   height: 550px;
   width: 400px;
 }
+@mixin  circle-bottom {
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+@mixin room-slider {
+  display: flex;
+  flex-direction: row;
+  width: 85vw;
+  left: 0;
+  visibility: hidden;
+  position: absolute;
+  border: 1px solid #171720;
+  margin-left: 6vw;
+}
+@mixin TESTIMONIALS {
+  display: flex;
+  flex-direction: row;
+  width: 65vw;
+  left: 0;
+  visibility: hidden;
+  position: absolute;
+  margin-left: 20vw;
+}
 .container{
     @include slider;
     width: 1350px;
@@ -587,16 +613,13 @@ $center : center;
     margin-top: 7vw;
   }
   .spaa {
-    // background-image: url(./spa-banner.jpg);
     @include banner;
   }
   .gym-high {
-    // background-image: url(./gym-banner.jpg);
     @include banner;
     margin-left: 2.2vw;
   }
   .restaurant-high {
-    // background-image: url(./restaurant-banner.jpg);
     @include banner;
     margin-left: 2.2vw;
   }
@@ -738,4 +761,114 @@ $center : center;
         height: 100%;
       }
     }
+  }
+  .black-slider {
+    background-color: #111118;
+  }
+  .ul-slider-1 {
+    display: flex;
+    flex-direction: row;
+    padding-top: 7vw;
+    margin-bottom: 10vw;
+  }
+  .kart-1 {
+    display: flex;
+    flex-direction: row;
+    visibility: visible;
+    width: 85vw;
+    position: relative;
+    border: 1px solid #171720;
+    margin-left: 3vw;
+  }
+  .kart-2 {
+    @include room-slider;
+  }
+  .kart-3 {
+    @include room-slider;
+  }
+  .kart-4 {
+    @include room-slider;
+  }
+  .circle {
+    margin-left: 45vw;
+  }
+  .paragraf {
+    display: flex;
+    flex-direction: column;
+    background-color: #171720;
+  }
+  .circle-1 {
+    @include circle-bottom;
+  }
+  .circle-2 {
+    @include circle-bottom;
+  }
+  .circle-3 {
+    @include circle-bottom;
+  }
+  .circle-4 {
+    @include circle-bottom;
+  }
+  .ul-slider-2 {
+    display: flex;
+    flex-direction: row;
+    padding-top: 1vw;
+    margin-bottom: 10vw;
+  }
+  .cart-1 {
+    display: flex;
+    flex-direction: row;
+    visibility: visible;
+    width: 65vw;
+    position: relative;
+    margin-left: 20vw;
+  }
+  .cart-2 {
+    @include TESTIMONIALS;
+  }
+  .cart-3 {
+    @include TESTIMONIALS;
+  }
+  .cart-4 {
+    @include TESTIMONIALS;
+  }
+  .cart-5 {
+    @include TESTIMONIALS;
+  }
+  .cart-6 {
+    @include TESTIMONIALS;
+  }
+  .test-high {
+    margin-top: 9vw;
+    margin-left: 39vw;
+    font-size: 40px;
+  }
+  .test {
+    color: dimgrey;
+    font-size: 13px;
+    margin-left: 40vw;
+  }
+  .paragraf-1 {
+    margin-left: 3vw;
+  }
+  .circle-A {
+    margin-left: 45vw;
+  }
+  .circle-A1 {
+    @include circle-bottom;
+  }
+  .circle-A2 {
+    @include circle-bottom;
+  }
+  .circle-A3 {
+    @include circle-bottom;
+  }
+  .circle-A4 {
+    @include circle-bottom;
+  }
+  .circle-A5 {
+    @include circle-bottom;
+  }
+  .circle-A6 {
+    @include circle-bottom;
   }
