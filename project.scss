@@ -83,6 +83,7 @@ $center : center;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
+  top: 20vw;
 }
 @mixin room-slider {
   display: flex;
@@ -130,16 +131,16 @@ $center : center;
 }
 
 .the_slider .s_slide_0{
-    background-image: url('./slider_n_1.jpg');
+    background-image: url('./picture/slider_n_1.jpg');
     @include height;
 }
 
 .the_slider .s_slide_1{
-    background-image: url('./slide_n_2_o.jpg');
+    background-image: url('./picture/slide_n_2_o.jpg');
     @include height;
 }
 .the_slider .s_slide_2{
-    background-image: url('./spa.jpg');
+    background-image: url('./picture/spa.jpg');
     @include height;
 }
 .header {
@@ -709,7 +710,7 @@ $center : center;
     margin-top: 2vw;
   }
   .off-area {
-    background-image: url(./home-banner-1.jpg);
+    background-image: url(./picture/home-banner-1.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -770,6 +771,34 @@ $center : center;
     flex-direction: row;
     padding-top: 7vw;
     margin-bottom: 10vw;
+    color: white;
+  }
+  .paragraf {
+    padding-left: 2vw;
+    padding-top: 2vw;
+  }
+  .title {
+    padding-top: 10vw;
+  }
+  .title-high {
+    color: white;
+  }
+  .title-high:hover {
+    color: rgb(14, 192, 133);
+  }
+  .read {
+    color: white;
+    margin-top: 6vw;
+    font-size: small;
+  }
+  .read::after {
+    @include lineanimation;
+  }
+  .read:hover::after {
+    width: 75px;
+  }
+  .read:hover {
+    color: rgb(14, 192, 133);
   }
   .kart-1 {
     display: flex;

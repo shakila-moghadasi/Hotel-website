@@ -33,19 +33,19 @@
 }
 
 .the_slider .s_slide_0 {
-  background-image: url("./slider_n_1.jpg");
+  background-image: url("./picture/slider_n_1.jpg");
   background-size: cover;
   height: 800px;
 }
 
 .the_slider .s_slide_1 {
-  background-image: url("./slide_n_2_o.jpg");
+  background-image: url("./picture/slide_n_2_o.jpg");
   background-size: cover;
   height: 800px;
 }
 
 .the_slider .s_slide_2 {
-  background-image: url("./spa.jpg");
+  background-image: url("./picture/spa.jpg");
   background-size: cover;
   height: 800px;
 }
@@ -912,7 +912,7 @@
 }
 
 .off-area {
-  background-image: url(./home-banner-1.jpg);
+  background-image: url(./picture/home-banner-1.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -978,6 +978,48 @@
   flex-direction: row;
   padding-top: 7vw;
   margin-bottom: 10vw;
+  color: white;
+}
+
+.paragraf {
+  padding-left: 2vw;
+  padding-top: 2vw;
+}
+
+.title {
+  padding-top: 10vw;
+}
+
+.title-high {
+  color: white;
+}
+
+.title-high:hover {
+  color: #0ec085;
+}
+
+.read {
+  color: white;
+  margin-top: 6vw;
+  font-size: small;
+}
+
+.read::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  margin-top: 10px;
+  background: #0ec085;
+  transition: width 0.3s;
+}
+
+.read:hover::after {
+  width: 75px;
+}
+
+.read:hover {
+  color: #0ec085;
 }
 
 .kart-1 {
@@ -1039,6 +1081,7 @@
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
+  top: 20vw;
 }
 
 .circle-2 {
@@ -1047,6 +1090,7 @@
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
+  top: 20vw;
 }
 
 .circle-3 {
@@ -1055,6 +1099,7 @@
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
+  top: 20vw;
 }
 
 .circle-4 {
@@ -1063,6 +1108,7 @@
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
+  top: 20vw;
 }
 
 .ul-slider-2 {
@@ -1157,6 +1203,7 @@
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
+  top: 20vw;
 }
 
 .circle-A2 {
@@ -1165,6 +1212,7 @@
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
+  top: 20vw;
 }
 
 .circle-A3 {
@@ -1173,6 +1221,7 @@
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
+  top: 20vw;
 }
 
 .circle-A4 {
@@ -1181,6 +1230,7 @@
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
+  top: 20vw;
 }
 
 .circle-A5 {
@@ -1189,6 +1239,7 @@
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
+  top: 20vw;
 }
 
 .circle-A6 {
@@ -1197,6 +1248,7 @@
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
+  top: 20vw;
 }
 
 /*# sourceMappingURL=project.css.map */
