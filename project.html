@@ -223,7 +223,7 @@
   <div class="black-slider"> 
     <ul class="ul-slider-1">
       <li>
-        <div class="kart-1">
+        <div class="kart">
             <div class="paragraf">
               <h1 class="title-high">SINGLE ROOM</h1>
               <p class="title">Single Room with sea view</p>
@@ -234,7 +234,7 @@
         </div>
       </li> 
       <li>
-        <div class="kart-2">
+        <div class="kart">
           <div class="paragraf">
             <h1 class="title-high">Double Room</h1>
             <p class="title">A quality room with sea or mountain view</p>
@@ -245,7 +245,7 @@
         </div>
       </li>
       <li> 
-        <div class="kart-3">
+        <div class="kart">
           <div class="paragraf">
             <h1 class="title-high">Family Suite</h1>
             <p class="title">Bring your family in this spacious suite!</p>
@@ -256,7 +256,7 @@
         </div>
       </li> 
       <li>
-        <div class="kart-4">
+        <div class="kart">
           <div class="paragraf">
             <h1 class="title-high">Deluxe King Suite</h1>
             <p class="title">Kings and queens sleep here!</p>
@@ -267,13 +267,13 @@
         </div>
       </li> 
     </ul>
-      <div class="circle">
-        <button class="circle-1"></button>
-        <button class="circle-2"></button>
-        <button class="circle-3"></button>
-        <button class="circle-4"></button>
-      </div>  
-  </div> 
+      <div>
+        <span class="circle" id="circle-1" onclick="currentSlide(1)"></span>
+        <span class="circle" id="circle-2" onclick="currentSlide(2)"></span>
+        <span class="circle" id="circle-3" onclick="currentSlide(3)"></span>
+        <span class="circle" id="circle-4" onclick="currentSlide(4)"></span>
+      </div> 
+    </div>  
   <div>
     <p class="test-high">TESTIMONIALS</p>
     <p class="test">LOVELY PEOPLE - AMAZING EXPERIENCES</p>
@@ -405,66 +405,9 @@
 
         $("#cleander-in").datepicker(options);  
         $("#cleander-out").datepicker(options);
-        
-        $(".circle-1").click(function(){
-          $(".kart-1").css({
-            "visibility" : "visible"
-          });
-          $(".kart-2").css({
-            "visibility" : "hidden"
-          });
-          $(".kart-3").css({
-            "visibility" : "hidden"
-          });
-          $(".kart-4").css({
-            "visibility" : "hidden"
-          });
-        });
 
-        $(".circle-2").click(function(){
-          $(".kart-2").css({
-            "visibility" : "visible"
-          })
-          $(".kart-1").css({
-            "visibility" : "hidden"
-          });
-          $(".kart-3").css({
-            "visibility" : "hidden"
-          });
-          $(".kart-4").css({
-            "visibility" : "hidden"
-          });
-        });
 
-        $(".circle-3").click(function(){
-          $(".kart-3").css({
-            "visibility" : "visible"
-          });
-          $(".kart-2").css({
-            "visibility" : "hidden",
-          });
-          $(".kart-1").css({
-            "visibility" : "hidden",
-          });
-          $(".kart-4").css({
-            "visibility" : "hidden",
-          });
-        });
 
-        $(".circle-4").click(function(){
-          $(".kart-4").css({
-            "visibility" : "visible"
-          });
-          $(".kart-2").css({
-            "visibility" : "hidden"
-          });
-          $(".kart-1").css({
-            "visibility" : "hidden"
-          });
-          $(".kart-3").css({
-            "visibility" : "hidden"
-          });
-        });
         $(".circle-A1").click(function(){
           $(".cart-1").css({
             "visibility" : "visible"
@@ -588,8 +531,49 @@
             "visibility" : "hidden"
           });
         });
-      });    
-</script>   
+      }); 
+      var slideIndex = 1;
+        showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("kart");
+        var dots = document.getElementsByClassName("circle");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "flex";
+        dots[slideIndex-1].className += " active";
+        } 
+
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("kart");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}
+          slides[slideIndex-1].style.display = "flex";
+          setTimeout(showSlides, 3000); 
+        }   
         </script>
     </section>
 </body>

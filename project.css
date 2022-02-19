@@ -973,9 +973,11 @@
   background-color: #111118;
 }
 
+.kart {
+  width: 85vw;
+}
+
 .ul-slider-1 {
-  display: flex;
-  flex-direction: row;
   padding-top: 7vw;
   margin-bottom: 10vw;
   color: white;
@@ -1022,93 +1024,11 @@
   color: #0ec085;
 }
 
-.kart-1 {
-  display: flex;
-  flex-direction: row;
-  visibility: visible;
-  width: 85vw;
-  position: relative;
-  border: 1px solid #171720;
-  margin-left: 3vw;
-}
-
-.kart-2 {
-  display: flex;
-  flex-direction: row;
-  width: 85vw;
-  left: 0;
-  visibility: hidden;
-  position: absolute;
-  border: 1px solid #171720;
-  margin-left: 6vw;
-}
-
-.kart-3 {
-  display: flex;
-  flex-direction: row;
-  width: 85vw;
-  left: 0;
-  visibility: hidden;
-  position: absolute;
-  border: 1px solid #171720;
-  margin-left: 6vw;
-}
-
-.kart-4 {
-  display: flex;
-  flex-direction: row;
-  width: 85vw;
-  left: 0;
-  visibility: hidden;
-  position: absolute;
-  border: 1px solid #171720;
-  margin-left: 6vw;
-}
-
-.circle {
-  margin-left: 45vw;
-}
-
 .paragraf {
   display: flex;
   flex-direction: column;
+  align-content: space-around;
   background-color: #171720;
-}
-
-.circle-1 {
-  height: 15px;
-  width: 15px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  top: 20vw;
-}
-
-.circle-2 {
-  height: 15px;
-  width: 15px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  top: 20vw;
-}
-
-.circle-3 {
-  height: 15px;
-  width: 15px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  top: 20vw;
-}
-
-.circle-4 {
-  height: 15px;
-  width: 15px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  top: 20vw;
 }
 
 .ul-slider-2 {
@@ -1203,7 +1123,7 @@
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  top: 20vw;
+  cursor: pointer;
 }
 
 .circle-A2 {
@@ -1212,7 +1132,7 @@
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  top: 20vw;
+  cursor: pointer;
 }
 
 .circle-A3 {
@@ -1221,7 +1141,7 @@
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  top: 20vw;
+  cursor: pointer;
 }
 
 .circle-A4 {
@@ -1230,7 +1150,7 @@
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  top: 20vw;
+  cursor: pointer;
 }
 
 .circle-A5 {
@@ -1239,7 +1159,7 @@
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  top: 20vw;
+  cursor: pointer;
 }
 
 .circle-A6 {
@@ -1248,7 +1168,54 @@
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  top: 20vw;
+  cursor: pointer;
+}
+
+.ul-slider-1 {
+  position: relative;
+  margin-left: 3.5vw;
+}
+
+.circle {
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+#circle-1 {
+  margin-left: 47vw;
+}
+
+.active, .circle:hover {
+  background-color: #717171;
+}
+
+.kart {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    margin-left: 40vw;
+  }
+  to {
+    margin-left: -100vw;
+  }
+}
+@keyframes fade {
+  from {
+    margin-left: 40vw;
+  }
+  to {
+    margin-left: -100vw;
+  }
 }
 
 /*# sourceMappingURL=project.css.map */
