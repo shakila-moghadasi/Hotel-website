@@ -1,0 +1,53 @@
+.ul-slider-2 {
+    display: flex;
+    flex-direction: row;
+    padding-top: 1vw;
+    margin-bottom: 10vw;
+  }
+  .cart-1 {
+    display: flex;
+    flex-direction: row;
+    visibility: visible;
+    width: 65vw;
+    position: relative;
+    margin-left: 20vw;
+  }
+  .cart-2 {
+    @include TESTIMONIALS;
+  }
+  .cart-3 {
+    @include TESTIMONIALS;
+  }
+  .cart-4 {
+    @include TESTIMONIALS;
+  }
+  .cart-5 {
+    @include TESTIMONIALS;
+  }
+  .cart-6 {
+    @include TESTIMONIALS;
+  }
+  .paragraf-1 {
+    margin-left: 3vw;
+  }
+  .circle-A {
+    margin-left: 45vw;
+  }
+  .circle-A1 {
+    @include circle-bottom;
+  }
+  .circle-A2 {
+    @include circle-bottom;
+  }
+  .circle-A3 {
+    @include circle-bottom;
+  }
+  .circle-A4 {
+    @include circle-bottom;
+  }
+  .circle-A5 {
+    @include circle-bottom;
+  }
+  .circle-A6 {
+    @include circle-bottom;
+  }

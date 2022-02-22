@@ -1,0 +1,39 @@
+.container{
+    @include slider;
+    width: 1350px;
+}
+.the_slider{
+    @include slider;
+    overflow: hidden;
+    width: 1350px;
+    height: 900px;
+}
+
+.the_slider .s_slide{
+    @include slider;
+    float: left;
+    background-repeat: no-repeat;
+}
+
+.the_slider .s_slider_container{
+    @include slider;
+    cursor: $pointer;
+}
+
+.the_slider .s_slider_container:active{
+    cursor: -webkit-grabbing
+}
+
+.the_slider .s_slide_0{
+    background-image: url('./picture/slider_n_1.jpg');
+    @include height;
+}
+
+.the_slider .s_slide_1{
+    background-image: url('./picture/slide_n_2_o.jpg');
+    @include height;
+}
+.the_slider .s_slide_2{
+    background-image: url('./picture/spa.jpg');
+    @include height;
+}

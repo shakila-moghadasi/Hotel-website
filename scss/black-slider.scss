@@ -1,0 +1,80 @@
+.paragraf {
+    padding-left: 2vw;
+    padding-top: 2vw;
+  }
+  .title {
+    padding-top: 10vw;
+  }
+  .title-high {
+    color: white;
+  }
+  .title-high:hover {
+    color: rgb(14, 192, 133);
+  }
+  .read {
+    color: white;
+    margin-top: 6vw;
+    font-size: small;
+  }
+  .read::after {
+    @include lineanimation;
+  }
+  .read:hover::after {
+    width: 75px;
+  }
+  .read:hover {
+    color: rgb(14, 192, 133);
+  }
+  .paragraf {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    background-color: #171720;
+  }
+  .test-high {
+    margin-top: 9vw;
+    margin-left: 39vw;
+    font-size: 40px;
+  }
+  .test {
+    color: dimgrey;
+    font-size: 13px;
+    margin-left: 40vw;
+  }
+.kart {
+    width: 85vw;
+  }
+  .ul-slider-1 {
+    padding-top: 7vw;
+    margin-bottom: 10vw;
+    color: white;
+  }
+  .ul-slider-1 {
+    position: relative;
+    margin-left: 3.5vw;
+  }
+  .circle {
+    @include circle-bottom;
+    margin-bottom: 20px;
+  }
+  #circle-1 {
+    margin-left: 47vw;
+  }
+  .active, .circle:hover {
+    background-color: #717171;
+  }
+  .kart {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1s;
+    animation-name: fade;
+    animation-duration: 1s;
+  }
+  @-webkit-keyframes fade {
+    from {margin-left: 40vw;}
+    to {margin-left: -100vw;}
+  }
+  
+  @keyframes fade {
+    from {margin-left: 40vw;}
+    to {margin-left: -100vw;}
+  }

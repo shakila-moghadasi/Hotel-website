@@ -1,0 +1,100 @@
+$border : 1px solid rgb(14, 192, 133);
+$margin : 5px 10px 15px 15px;
+$block : block;
+$none : none;
+$fontheader : 14px;
+$pointer : pointer;
+$center : center;
+@mixin slider {
+    position: relative;
+}
+@mixin height {
+    background-size: cover;
+    height: 800px;
+}
+@mixin lineanimation {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    margin-top: 10px;
+    background: rgb(14, 192, 133);
+    transition: width .3s;
+}
+@mixin menu {
+    padding-top: 40px;
+    color: white;
+    font-size: $fontheader;
+}
+@mixin menutext {
+    font-size: $fontheader;
+    visibility: hidden;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border : 1px solid black;
+    position: absolute;
+    z-index: 1;
+    padding : 5px;
+    margin-top: 20px;
+    transition: opacity 0.3s;
+}
+@mixin menuhover {
+    visibility: visible;
+    opacity: 1;
+}
+@mixin cleander {
+  display: flex;
+  flex-direction: column;
+  background-color: #1F1F2C;
+  border: 1px solid #1f1f2c !important;
+  width: 350px;
+  height: 85px;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+}
+@mixin black-area {
+  position: absolute;
+  display: inline-flex;
+  color: white;
+  text-align: center;
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-top: 40px;
+}
+@mixin  banner {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  height: 550px;
+  width: 400px;
+}
+@mixin circle-bottom {
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+@mixin room-slider {
+  display: flex;
+  flex-direction: row;
+  width: 85vw;
+  left: 0;
+  visibility: hidden;
+  position: absolute;
+  border: 1px solid #171720;
+  margin-left: 6vw;
+}
+@mixin TESTIMONIALS {
+  display: flex;
+  flex-direction: row;
+  width: 65vw;
+  left: 0;
+  visibility: hidden;
+  position: absolute;
+  margin-left: 20vw;
+}

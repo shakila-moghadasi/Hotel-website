@@ -1,0 +1,26 @@
+.black-cleander-high {
+    display: flex;
+    flex-direction: column;
+  }
+  .black-cleander-low {
+    @include black-area;
+    margin-left: 105px;
+    margin-top: 645px;
+    border: 1px solid #111118;
+    background-color: #111118;
+    padding-bottom: 115px;
+  }
+  .btn-CLEANDER {
+    @include black-area;
+    margin-left: 385px;
+    margin-top: 800px;
+    padding-bottom: 70px;
+    font-size: small;
+  }
+  .cleander-out {
+    @include cleander;
+    margin-left: 30px;
+  }
+  .cleander-in {
+    @include cleander;
+  }

@@ -1,0 +1,50 @@
+.black-slide {
+    padding-top: 50px;
+    padding-left: 35px;
+    height: 77vw;
+  }
+  .high-level a::after {
+    @include lineanimation;
+  }
+  .high-level a:hover::after {
+    width: 90%;
+  }
+  .black-slide a {
+    padding-bottom: 20px;
+  }
+  .low-level {
+    padding-left: 33px;
+  }
+  .high-level::after {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 1px;
+    margin-top: 10px;
+    margin-bottom: 60px;
+    background: grey;
+  }
+  .p-blacklist {
+    color: white;
+  }
+  .phone {
+      color: white;
+      padding-top: 10px;
+  }
+  .phone-icon::after {
+    content: "\f095";
+  }
+  .email {
+    color: white;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+  }
+  .email-icon::after {
+    content: "\f0e0";
+    display: inline-block;
+  }
+  .txt-email {
+      display: inline-block;
+      font-size: medium;
+  }

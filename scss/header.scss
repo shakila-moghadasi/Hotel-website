@@ -1,0 +1,266 @@
+.header {
+    position: absolute;
+    width: 1350px;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 10;
+}
+.picture {
+    width: 100px;
+    height: 50px;
+    padding-top: 25px;
+    padding-left: 15px;
+    padding-bottom: 25px;
+}
+
+.book-now {
+    margin-top: 2.5vw;
+    padding-left: 980px;
+}
+.mainbar {
+    display: flex;
+    flex-direction: row;
+}
+.Extra {
+    padding-left: 22px;
+    color: white;
+}
+.menu {
+    display: inline-block;
+    cursor: $pointer;
+    padding-left: 18px;
+    padding-top: 35px;
+  }
+  .bar1, .bar2, .bar3 {
+    width: 25px;
+    height: 1px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  .sidenav {
+    font-size: 13px;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow: scroll;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  .sidenav a {
+    text-decoration: $none;
+    color: white;
+    display: $block;
+    transition: 0.3s;
+  }
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  .closebtn {
+    position: absolute;
+    margin-top: -18px;
+    right: 25px;
+    font-size: medium;
+    margin-right: 170px;
+    
+  }
+  .dropdown-content {
+    display: $none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    height: 140px;
+    z-index: 1;
+  }
+  .dropdown-content a {
+    color: white;
+    text-decoration: $none;
+    display: $block;
+  }
+  .dropdown:hover .dropdown-content {display: $block;}
+  .light {
+    margin: $margin;
+    border-bottom: $border;
+    font-size: $fontheader;
+    cursor: $pointer;
+  }
+  .light::after {
+    @include lineanimation;
+}
+  .dark {
+    margin: $margin;
+    font-size: $fontheader;
+    cursor: $pointer;
+  }
+
+.dark::after {
+    @include lineanimation;
+}
+
+.dark:hover::after {
+    width: 100%;
+}
+  .dropbtn {
+    padding-top: 6px;
+    text-decoration: $none;
+    font-size: $fontheader;
+    color: white;
+    display: $block;
+    border: $none;
+    background: $none;
+    width:100%;
+    text-align: left;
+    cursor: $pointer;
+  }
+  .dropbtn::after {
+    @include lineanimation;
+    width: 43px;
+  }
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  }
+  .dropdown {
+      margin-left: -81vw;
+      margin-top: 2.5vw;
+      position: relative;
+      display: inline-block;
+      font-size: $fontheader;
+  }
+  #border {
+    display: inline-block;
+}
+.rooms {
+  @include menu;
+  padding-left: 30px;
+  cursor: $pointer;
+}
+.roomstext {
+  @include menutext;
+}
+.rooms:hover .roomstext {
+  @include menuhover;
+}
+.rooms::after {
+  @include lineanimation;
+}
+.rooms:hover::after {
+  width: 100%;
+}
+
+
+.loc {
+  padding-left: 40px;
+  @include menu;
+  cursor: $pointer;
+}
+.loctext {
+  @include menutext;
+}
+.loc:hover .loctext {
+  @include menuhover;
+}
+.loc::after {
+  @include lineanimation;
+}
+.loc:hover::after {
+  width: 100%;
+}
+
+
+.activiti {
+  padding-left: 45px;
+  @include menu;
+  cursor: $pointer;
+}
+.activititext {
+  @include menutext;
+}
+.activiti:hover .activititext {
+  @include menuhover;
+}
+.activiti::after {
+  @include lineanimation;
+}
+.activiti:hover::after {
+  width: 100%;
+}
+
+
+.res {
+  padding-left: 45px;
+  @include menu;
+  cursor: $pointer;
+}
+.restext {
+  @include menutext;
+}
+.res:hover .restext {
+  @include menuhover;
+}
+.res::after {
+  @include lineanimation;
+}
+.res:hover::after {
+  width: 100%;
+}
+
+
+.spa {
+  padding-left: 45px;
+  @include menu;
+  cursor: $pointer;
+}
+.spatext {
+  @include menutext;
+}
+.spa:hover .spatext {
+  @include menuhover;
+}
+.spa::after {
+  @include lineanimation;
+}
+.spa:hover::after {
+  width: 100%;
+}
+
+
+.contact {
+  padding-left: 45px;
+  @include menu;
+  cursor: $pointer;
+}
+.contacttext {
+  @include menutext;
+}
+.contact:hover .contacttext {
+  @include menuhover;
+}
+.contact::after {
+  @include lineanimation;
+}
+.contact:hover::after {
+  width: 100%;
+}
+
+
+.more {
+  padding-left: 45px;
+  @include menu;
+  cursor: $pointer;
+}
+.moretext {
+  @include menutext;
+}
+.more:hover .moretext {
+  @include menuhover;
+}
+.more::after {
+  @include lineanimation;
+}
+.more:hover::after {
+  width: 100%;
+}

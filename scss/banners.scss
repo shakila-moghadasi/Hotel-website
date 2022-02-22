@@ -1,0 +1,94 @@
+.galery {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    margin-left: 3.6vw;
+    margin-right: 7vw;
+    margin-top: 7vw;
+  }
+  .spaa {
+    @include banner;
+  }
+  .gym-high {
+    @include banner;
+    margin-left: 2.2vw;
+  }
+  .restaurant-high {
+    @include banner;
+    margin-left: 2.2vw;
+  }
+  .spa-salon {
+    position: relative;
+  }
+  .gym {
+    position: relative;
+  }
+  .restaurant {
+    position: relative;
+  }
+  .hoverbox_icon {
+    top : 2vw;
+    left: 2vw;
+    position: absolute;
+  }
+  .hoverbox_paragraph {
+    color: white;
+    margin-bottom: 0.3vw;
+    padding-left: 18.3vw;
+    font-size: 18px;
+    bottom : 0;
+    left: 0;
+    width: 10.8vw;
+    height: 0vw;
+    position: absolute;
+    background-color: rgba(0,0,0,0.3);
+    animation-name: example;
+    transition: .5s ease;
+  }
+  .hoverbox_paragraph p {
+    visibility: hidden;
+    margin-top: 35vw;
+    margin-left: -5vw;
+    margin-right: -5vw;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .spa-high:hover .hoverbox_paragraph {
+    opacity: 1;
+    height:44vw;
+  }
+  .spa-high:hover .hoverbox_paragraph p {
+    visibility: visible;
+  }
+  .spa-high:hover .hoverbox_title {
+    visibility: hidden;
+  }
+  .gym-high:hover .hoverbox_paragraph {
+    opacity: 1;
+    height:44vw;
+  }
+  .gym-high:hover .hoverbox_paragraph p {
+    visibility: visible;
+  }
+  .gym-high:hover .hoverbox_title {
+    visibility: hidden;
+  }
+  .restaurant-high:hover .hoverbox_paragraph {
+    opacity: 1;
+    height:44vw;
+  }
+  .restaurant-high:hover .hoverbox_paragraph p {
+    visibility: visible;
+  }
+  .restaurant-high:hover .hoverbox_title {
+    visibility: hidden;
+  }
+  .hoverbox_title {
+    color: white;
+    padding-top: 30vw;
+    padding-left: 3vw;
+    visibility: visible;
+    position: absolute;
+    top : 130px;
+  }
